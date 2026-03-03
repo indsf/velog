@@ -26,8 +26,7 @@ def pick_feed(urls):
     return urls[0], feedparser.parse(urls[0])
 
 def main():
-    # 1) RSS 주소: 환경변수 RSS_URL이 있으면 그걸 쓰고, 없으면 아래 기본값 사용
-    # 예: RSS_URL="https://api.velog.io/rss/@너의벨로그아이디"
+    RSS_URL='https://api.velog.io/rss/@inhlee'
     rss_url = os.getenv("RSS_URL", "").strip()
 
     # 기본 후보들 (api / v2 둘 다 시도)
